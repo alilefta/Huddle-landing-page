@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+/*### Headings
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 600
+
+### Body
+
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400*/
+
+:root{
+	box-sizing: border-box;
+	--violet: hsl(257, 40%, 49%);
+	--soft-magenta: hsl(300, 69%, 71%);
+
+	--open-sans: "Open Sans";
+	--poppins: "Poppins";
+}
+
+
+body{
+	height:735px;
+	width: 100%;
+	margin:0;
+	padding: 0;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+
+}
+
+header{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: hsl(257, 40%, 49%) url("../images/bg-desktop.svg") no-repeat scroll;
+	background-size: contain;
+}
+
+header section.logo{
+	width: 100%;
+	height: 100px;
+	margin-top: -1.8rem;
+}
+
+header section.logo img{
+	margin:0 4rem 4rem 4rem;
+	width:200px;
+	margin:0 0 0 6%;
+}
+
+header section.container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row-reverse;
+	/*margin: 2rem 0 0 0;*/
+}
+
+header section.container .typeo_column{
+	width: 100%;
+	padding: 0 2rem 2rem 2rem;
+	color:#fff;
+	font-family: var(--poppins);
+}
+
+header section.container .typeo_column .main_heading{
+	font-family: "Poppins";
+	font-weight: 600;
+	max-width: 85%;
+	width: 80%;
+	font-size:2rem;
+	margin:1.5rem 0;
+}
+
+header section.container .typeo_column .main_subtext{
+	font-family: var(--open-sans);
+	font-weight:400;
+	font-size: 0.9rem;
+	max-width: 90%;
+	width: 80%;
+	margin:1.5rem 0;
+}
+
+header section.container .typeo_column .main_btn{
+	border-radius: 2rem;
+	padding: 0.7rem 3rem;
+	border:none;
+	font-family: var(--open-sans);
+	font-weight: 400;
+	cursor: pointer;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+	transition: 0.3s linear background-color;
+}
+
+header section.container .typeo_column .main_btn:hover{
+	background-color: var(--soft-magenta);
+	color: #fff;
+	transition: 0.3s linear background-color color;
+
+}
+header section.container .typeo_column .main_btn:hover a{
+	color: #fff;
+	transition: 0.3s linear color;
+}
+
+header section.container .typeo_column .main_btn a{
+	text-decoration: none;
+	font-size: 0.9rem;
+	color: var(--violet);
+	background-color: transparent;
+	transition: 0.3s linear color
+
+}
+header section.container .illustration_column{
+	width: 100%;
+	padding: 2rem 1rem 1rem 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header section.container .illustration_column img{
+	width: 100%;
+	height: 100%;
+	max-width: 650px;
+	min-width: 350px;
+}
+
+
+/* Social Icons */
+
+.social_sec{
+	align-self: flex-end;
+	margin-right: 5rem;
+	/*margin-top: 2rem;*/
+}
+
+.social_sec i{
+	border:2px solid #ddd;
+	color:white;
+	border-radius: 100%;
+	padding:7px;
+	margin: 0 5px;
+	width: 15px;
+	height: 15px;
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+	transition: 0.3s linear background-color;
+}
+
+.social_sec i:hover{
+	background-color: var(--soft-magenta);
+	transition: 0.3s linear background-color;
+}
+
+
+@media screen and (max-width: 1200px){
+	header{
+		background-size: cover;
+	}
+
+}
+
+@media screen and (max-width: 1010px){
+
+	header{
+		justify-content: center;
+	}
+
+	header section.container .typeo_column .main_heading{
+		font-size: 1.8rem;
+		width: 90%;
+		min-width: 350px
+	}
+
+	header section.logo{
+		margin-top: -2rem;
+	}
+
+	header section.container .illustration_column img{
+		/*width: 0px*/
+	}
+}
+
+@media screen and (max-width: 834px){
+	body{
+		height: 850px
+	}
+	header{
+		background: hsl(257, 40%, 49%) url("../images/bg-mobile.svg") no-repeat scroll;
+		background-size: contain;
+	}
+
+	header section.logo{
+		margin-top: 2%;
+		margin-left: 0;
+	}
+	header section.logo img{
+		margin: 1rem 0 0 2rem;
+		width: 30%;
+	}
+
+	header section.container{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column-reverse;
+		height: 100%
+	}
+
+	header section.container .illustration_column{
+		width: 90%;
+		height: 100%;
+		margin: 0;
+		padding:0;
+	}
+
+	header section.container .typeo_column{
+		width: 100%;
+		padding:0;
+		text-align: center;
+	}
+
+	header section.container .typeo_column .main_heading{
+		width: 100%;
+		padding: 0;
+		margin:auto;
+	}
+
+	header section.container .typeo_column .main_subtext{
+		width: 100%;
+		padding:0;
+		margin:2rem auto;
+	}
+
+	header section.container .illustration_column img{
+		width: 100%;
+		height: 90%;
+	}
+
+
+	header section.social_sec{
+		align-self: center;
+		margin: 3rem 0;
+	}
+}
+
